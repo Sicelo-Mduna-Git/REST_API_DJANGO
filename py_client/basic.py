@@ -6,5 +6,5 @@ import requests
 # print(get_response.text)
 # print(get_response.json())
 endpoint = "http://127.0.0.1:8000/api/home"
-get_response = requests.get(endpoint)
-print(get_response.json()['message'])
+get_response = requests.get(endpoint, json = {'message': "Hello World"})
+print(get_response.json())
